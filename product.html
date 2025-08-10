@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heap Demo — Product</title>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- HEAP SNIPPET: paste your script here (same as index.html) -->
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="checkout.html" id="lnk-checkout">Checkout</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h1>Demo Product</h1>
+      <p>Use this page to practice tagging: Add to Cart and Checkout.</p>
+
+      <div style="display:flex; gap:20px; align-items:center; margin-top:18px;">
+        <div>
+          <img src="https://picsum.photos/seed/heapdemo/360/220" alt="demo" style="border-radius:12px; border:1px solid rgba(255,255,255,0.1)" />
+        </div>
+        <div>
+          <h2>$29.00</h2>
+          <p>Lightweight, imaginary product for analytics demos.</p>
+          <button class="btn primary" id="btn-add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">© Demo Site for Heap Practice</footer>
+
+  <script>
+    // Simple state to simulate "cart" count (client-only)
+    const addBtn = document.getElementById("btn-add-to-cart");
+    addBtn.addEventListener("click", () => {
+      // Optional: custom track for extra signal in Heap (autocapture will also pick the click)
+      if (window.heap && heap.track) heap.track("AddToCart_Click");
+      alert("Added to cart (simulated). Now go to Checkout.");
+    });
+  </script>
+</body>
+</html>

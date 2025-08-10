@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heap Demo — Home</title>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- HEAP SNIPPET: paste your script here
+  Example shape (do not use as-is):
+  <script>
+  window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addUserProperties","identify","resetIdentity","setEventProperties","track"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
+  heap.load("YOUR_APP_ID");
+  </script>
+  -->
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h1>Welcome to the Heap Demo</h1>
+      <p>Click around to generate events. Then tag with <span class="code">Visual Labeling</span> in Heap.</p>
+      <a class="btn primary" href="product.html" id="cta-explore">Explore the Product</a>
+    </div>
+  </main>
+
+  <footer class="footer">© Demo Site for Heap Practice</footer>
+  <script>
+    // Optional: You can also call heap.track here if you want explicit custom events.
+    // if (window.heap && heap.track) heap.track("Home_Viewed");
+  </script>
+</body>
+</html>

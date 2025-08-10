@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heap Demo — Checkout</title>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- HEAP SNIPPET: paste your script here (same as index.html) -->
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h1>Checkout</h1>
+      <p>Fill the form and submit to trigger a "Place Order" event you can tag.</p>
+
+      <form id="checkout-form" style="display:grid; gap:12px; max-width:440px;">
+        <label>
+          Full Name
+          <input type="text" name="full_name" placeholder="John Doe" required
+                 style="width:100%; padding:10px; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.06); color:#fff;">
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" placeholder="john@example.com" required
+                 style="width:100%; padding:10px; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.06); color:#fff;">
+        </label>
+
+        <label>
+          Address
+          <input type="text" name="address" placeholder="123 Street"
+                 style="width:100%; padding:10px; border-radius:10px; border:1px solid rgba(255,255,255,0.2); background:rgba(255,255,255,0.06); color:#fff;">
+        </label>
+
+        <button class="btn primary" type="submit" id="btn-place-order">Place Order</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">© Demo Site for Heap Practice</footer>
+
+  <script>
+    const form = document.getElementById("checkout-form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      // Optional: explicit custom event
+      if (window.heap && heap.track) heap.track("PlaceOrder_Submit");
+      alert("Order placed (simulated). Thanks!");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
